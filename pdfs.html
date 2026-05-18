@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Description" content="Rose Marcus - Selected Works">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="pdfs.css"  id="desktop">
+<link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+<script src="js/jquery-3.1.0.js"></script>
+<title>Rose Marcus</title>
+</head>
+
+<body>
+
+
+<div id="container">
+    
+
+<div id="rose">
+<img id= "roseimg" src="images/rose.png" width="18%" class="info-tag" onclick="location.href='information.html'">
+<img id= "infoimg" src="images/info.png" width="18%" onclick="location.href='information.html'">
+</div>
+
+<div id="captionbox">
+</div>
+
+<div id="background">
+</div>
+<div id="infotab-mobile">
+<div id=rosemenu-mobile>
+<div id="rose-mobile">
+<img class="inforose" id= "roseimg-mobile" src="images/rose-mobile.png">
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id="scroll">
+<div>
+<img src="images/Night-Thumb-3.jpg" id="image-1">
+<div class="caption" id="num-74">
+<i>Repro</i>, Night Gallery<br>
+<div id="second-line">Los Angeles, CA (2023)</div>
+
+</div>
+</div>
+
+<div>
+<img src="images/DP-Thumb.jpg" id="image-2">
+<div class="caption">
+<i>Fountains</i>, David Petersen Gallery <br>
+<div id="second-line"> Minneapolis, MN (2022)</div>
+</div>
+</div>
+
+
+<div>
+<img src="images/Night-Thumb-2.jpg" id="image-1">
+<div class="caption" id="num-74">
+<i>Front</i>, Night Gallery, solo exhibition <br>
+<div id="second-line"> Los Angeles, CA (2019)</div>
+</div>
+</div>
+
+
+
+<div>
+<img src="images/Mary-Thumb.jpg" id="image-1">
+<div class="caption" id="num-74">
+<i>Core</i>, Mary Mary, solo exhibition <br>
+<div id="second-line"> Glasgow, United Kingdom (2018)</div>
+</div>
+</div>
+
+<div>
+<img src="images/Mary-Thumb.jpg" id="image-1">
+<div class="caption" id="num-74">
+Paris Internationale, solo presentation  <br>
+<div id="second-line"> Paris, France (2017)</div>
+</div>
+</div>
+
+
+<div>
+<img src="images/London-Thumb.jpg" id="image-1">
+<div class="caption" id="num-74">
+Frieze London, solo presentation <br>
+<div id="second-line"> Night Gallery, London, England (2016)</div>
+</div>
+</div>
+
+
+<div>
+<img src="images/Imagine_Install.jpg" id="image-1">
+<div class="caption" id="num-74">
+<i>Imagine</i> And Now, solo exhibition <br>
+<div id="second-line"> And Now, Dallas, TX (2015)</div>
+</div>
+</div>
+
+<div>
+<img src="images/The_Four_Seasons_Install.jpg" id="image-1">
+<div class="caption" id="num-74">
+<i>The Four Seasons</i>, Night Gallery, solo exhibition <br>
+<div id="second-line"> Los Angeles, CA (2015)</div>
+</div>
+</div>
+<div>
+</div>
+<div>
+</div>
+</div>
+
+
+
+
+<script>
+
+$(document).ready(function() {
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+   changeCSS('mobile.css', 0);
+   mobile = true;
+   
+   
+}else{
+}
+
+});
+
+    
+
+ var scroll = document.querySelector('#scroll');
+    
+ document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages = document.querySelectorAll("img.lazy");    
+  var lazyloadThrottleTimeout;
+  
+  function lazyload () {
+    if(lazyloadThrottleTimeout) {
+      clearTimeout(lazyloadThrottleTimeout);
+    }    
+    
+    lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = scroll.scrollTop;
+        lazyloadImages.forEach(function(img) {
+          console.log(img.offsetTop, (window.innerHeight + scrollTop + 2200));
+            if(img.offsetTop < (window.innerHeight + scrollTop + 2200)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+                
+            }
+        });
+       
+    }, 20);
+  }
+
+  scroll.addEventListener("scroll", lazyload)
+  window.addEventListener("resize", lazyload);
+  window.addEventListener("orientationChange", lazyload);
+ 
+});
+       
+
+
+$('#rose-mobile').css('cursor','pointer');
+$(document).on('click', '#rose-mobile',  function(event) {
+   window.location.href = "http://rosemarcus.art/information.html";
+});
+
+
+var mobile = false;
+
+function changeCSS(cssFile, cssLinkIndex) {
+
+    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+
+    var newlink = document.createElement("link");
+    newlink.setAttribute("rel", "stylesheet");
+    newlink.setAttribute("type", "text/css");
+    newlink.setAttribute("href", "mobile.css");
+
+    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+}
+
+
+
+
+
+
+ var imagetargets = ["#image-1",
+"#image-2",
+"#image-3",
+"#image-4",
+"#image-5",
+"#image-6",
+"#image-7",
+"#image-8",
+"#image-9",
+"#image-10",
+"#image-11",
+"#image-12",
+"#image-13",
+"#image-14",
+"#image-15",
+"#image-16",
+"#image-17",
+"#image-18",
+"#image-19",
+"#image-20",
+"#image-21",
+"#image-22",
+"#image-23",
+"#image-24",
+"#image-25",
+"#image-26",
+"#image-27",
+"#image-28",
+"#image-29",
+"#image-30",
+"#image-31",
+"#image-32",
+"#image-33",
+"#image-34",
+"#image-35",
+"#image-36",
+"#image-37",
+"#image-38",
+"#image-39",
+"#image-40",
+"#image-41",
+"#image-42",
+"#image-43",
+"#image-44",
+"#image-45",
+"#image-46",
+"#image-47",
+"#image-48",
+"#image-49",
+"#image-50",
+"#image-51",
+"#image-52",
+"#image-53",
+"#image-54",
+"#image-55",
+"#image-56",
+"#image-57",
+"#image-58",
+"#image-59",
+"#image-60",
+"#image-61",
+"#image-62",
+"#image-63",
+"#image-64",
+"#image-65",
+"#image-66",
+"#image-67",
+"#image-68",
+"#image-69",
+"#image-70",
+"#image-71",
+"#image-72",
+"#image-73",
+"#image-74",
+"#image-75",
+"#image-76",
+"#image-77",
+"#image-78",
+"#image-79",
+"#image-80",
+"#image-81",
+"#image-82",
+"#image-83",
+"#image-84",
+"#image-85",
+"#image-86",
+"#image-87",
+"#image-88",
+"#image-89",
+"#image-90",
+"#image-91",
+"#image-92",
+"#image-93",
+"#image-94",
+"#image-95",
+"#image-96",
+"#image-97",
+"#image-98",
+"#image-99",
+"#image-100",
+"#image-101",
+"#image-102",
+"#image-103",
+"#image-104",
+"#image-105",
+"#image-106",
+"#image-107",
+"#image-108",
+"#image-109",
+"#image-110",
+"#image-111",
+"#image-112",
+"#image-113",
+"#image-114",
+"#image-115",
+"#image-116",
+"#image-117",
+"#image-118",
+"#image-119",
+"#image-120",
+"#image-121",
+"#image-122",
+"#image-123",
+"#image-124",
+"#image-125",
+"#image-126",
+"#image-127",
+"#image-128",
+"#image-129",
+"#image-130",
+"#image-131",
+"#image-132",
+"#image-133",
+"#image-134",
+"#image-135",
+"#image-136",
+"#image-137",
+"#image-138",
+"#image-139",
+"#image-140",
+"#image-141",
+"#image-142",
+"#image-143",
+"#image-144",
+"#image-145",
+"#image-146",
+"#image-147",
+"#image-148",
+"#image-149",
+"#image-150",
+"#image-151",
+"#image-152",
+"#image-153",
+"#image-154",
+"#image-155",
+"#image-156",
+"#image-157",
+"#image-158",
+"#image-159",
+"#image-160",
+"#image-161",
+"#image-162",
+"#image-163",
+"#image-164",
+"#image-165",
+"#image-166",
+"#image-167",
+"#image-168",
+"#image-169",
+"#image-170",
+"#image-171",
+"#image-172",
+"#image-173",
+"#image-174",
+"#image-175",
+"#image-176",
+"#image-177",
+"#image-178",
+"#image-179",
+"#image-180",
+"#image-181",
+"#image-182",
+"#image-183",
+"#image-184",
+"#image-185",
+"#image-186",
+"#image-187",
+"#image-188",
+"#image-189",
+"#image-190",
+"#image-191",
+"#image-192",
+"#image-193",
+"#image-194",
+"#image-195",
+"#image-196",
+"#image-197",
+"#image-198",
+"#image-199"]
+
+
+$(document).mousemove(function(){
+
+if (mobile == false) {  
+
+$("#rose").mouseenter(function(){
+    $("#roseimg").css("display", "none");
+    $("#infoimg").css("display", "inline-block");
+})
+
+$("#rose").mouseleave(function(){
+    $("#roseimg").css("display", "inline-block");
+    $("#infoimg").css("display", "none");
+  
+  })
+}
+
+})
+
+
+$(document).ready(function () {
+
+
+
+
+
+
+
+
+    if (mobile == false) {
+        
+         var a = $(window).scrollTop();
+ a = 0;
+ var angle = 0;
+ 
+
+
+
+            jQuery.each(imagetargets, function(i, val) {
+            jQuery(val).mouseenter(function(){
+       
+          var indexx = imagetargets.indexOf(val) +1; 
+           $("#num-" + indexx).css("visibility","visible");
+            var captionHeight = document.getElementById('captionbox').clientHeight;
+            });  
+        });
+
+    
+        jQuery.each(imagetargets, function(i, val) {
+            
+           jQuery(val).mouseleave(function(){
+            var indexx = imagetargets.indexOf(val) +1; 
+          $("#num-" + indexx).css("visibility","hidden");
+            });  
+        
+            
+        });
+    
+    
+    
+        for (i = 1; i<199; i++) {
+        var actualheight = $('#num-' + i).height();
+        var newposition = actualheight*5;
+        $('#num' + i).css("bottom", newposition + "px");}
+
+    } else {
+        
+        
+        
+        
+    }
+
+})
+
+
+
+</script>
+
+</body>
+</html>

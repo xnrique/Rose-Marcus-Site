@@ -1,0 +1,250 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+html{
+-webkit-text-size-adjust: 100%;
+
+}
+
+html, body{
+overflow-x: hidden;
+margin: 0;
+height: 100%;
+font-family: "Times New Roman", Times, serif;
+font-size: 1.2em;
+color: #666666;
+background: linear-gradient(#e8e8e8, #c1cec0);
+    }
+
+img{
+  margin-bottom: 5%;
+  margin-top:5%;}
+
+a:visted {
+  text-decoration: none;
+  color: #666666;
+    text-shadow: 2px 2px 2px rgb(169, 169, 169);
+}
+
+ a:link{
+  text-decoration: none;
+  color: #666666;
+    text-shadow: 2px 2px 2px rgb(169, 169, 169);
+  }
+
+a:hover{
+  text-decoration: underline;
+  color:#9c9c9a;
+  text-shadow: none;
+}
+
+a:active{
+text-decoration: none;
+color: #666666;
+    text-shadow: 2px 2px 2px rgb(169, 169, 169);
+}
+
+a{
+  text-decoration: none;
+  color: #666666;
+    text-shadow: 2px 2px 2px rgb(169, 169, 169);
+}
+
+img{
+  max-width: 90vw;
+  max-height: 70vh;
+}
+
+
+.caption{   
+  width: 70%;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20%;
+    display: block;
+    font-size: 0.6em;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    color: blue;
+    text-shadow: 2px 2px 2px rgb(169, 169, 169);
+    }
+
+#infotab-mobile{
+width: 100%;
+position: fixed;
+z-index: 999;
+}
+
+#rosemenu-mobile{
+position: static;
+}
+
+#rose-mobile{
+vertical-align: top;
+text-align: center;
+background: rgba(232, 232, 232, 0.94);
+padding-top: 1vh;
+padding-bottom: 1vh;
+}
+
+#roseimg-mobile{
+ margin: 0 auto;
+ text-align: center;
+ display: -webkit-box;
+}
+
+
+#rose-mobile img {
+  max-height: 5vh;
+  display: grid; 
+  -webkit-filter: drop-shadow(0px 0px 10px rgb(255, 0, 0));
+  -webkit-animation: roseglow 1.5s ease-in-out infinite alternate;
+  animation: roseglow 1.5s ease-in-out infinite alternate;
+}
+
+  /*-- Glow for Webkit --*/
+  @-webkit-keyframes roseglow {
+  0%{ 
+    -webkit-filter:drop-shadow(0px 0px 10px #ff0000);
+  }
+  100% { 
+    -webkit-filter:drop-shadow(0px 16px 30px #FFFFFF); 
+  }   
+}
+
+
+
+
+
+#infotab-mobile{
+width: 100%;
+position: fixed;
+z-index: 999;
+}
+
+#rosemenu-mobile{
+position: static;
+}
+
+#rose{
+    display:none;
+}
+
+#scroll{
+width: 100%;
+height: 100%;
+padding-top: 10%;
+text-align: center;
+z-index: 1;
+margin: auto;
+overflow: auto;
+position: absolute;
+}
+
+
+#scroll-cv{
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    text-align: center;
+    box-sizing: border-box
+}
+
+#scroll-cv img {
+    max-width: 100%;
+    display: list-item;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#cv-box{
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    margin: auto;
+    background-color: transparent;
+    border: 1px solid #666666;
+    box-sizing: border-box;
+    margin-top: 17%;
+    margin-bottom: 10%;
+}
+
+.cv-body{
+    padding-top: 4%;
+    padding-bottom: 4%;
+    top: 5%;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin: 0 auto;
+    text-align: left;
+    overflow: hidden;
+    color: #666666;
+    text-shadow: 2px 2px 2px rgb(169, 169, 169);
+    letter-spacing: 0.5px;
+    font-size: 0.5em;
+    box-sizing: border-box;
+    cursor:pointer; 
+}
+
+#cv-long{
+    display:none;
+}
+
+#cv{
+    position: absolute;
+    right: 4%;
+}
+
+
+.misc-box{
+    position: relative;
+    margin: auto;
+    background-color: transparent;
+    border: 1px solid #666666;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+    padding-right: 2%;
+    padding-left: 2%;
+    width:90%;
+}
+
+
+.misc-body{
+    padding-top: 4%;
+    padding-bottom: 4%;
+    top: 5%;
+    margin: 0 auto;
+    text-align: left;
+    color: #666666;
+    text-shadow: 2px 2px 2px rgb(169, 169, 169);
+    letter-spacing: 0.5px;
+    box-sizing: border-box;
+}
+
+.caption{
+    color: #666666;
+    text-shadow: 2px 2px 2px rgb(169, 169, 169);
+    letter-spacing: 0.5px;
+    margin-bottom:20%;
+}
+
+
+#infotab{display: none;
+}
+
+
+
+
